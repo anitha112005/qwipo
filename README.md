@@ -17,11 +17,11 @@ https://docs.google.com/presentation/d/1940sBaxmykr73T6FfZ_jj6R1wSBkLlCo/edit?us
 ## Team Members
 
 <!-- Add your team members and roles here -->
-- Ujwal kriti - Team Lead
-- Simoni - Team Member
-- Vardhan - Team member
-- Anitha - Team Member
-- Srithika - Team Member
+- Ujwal kriti - Team Lead - Frontend
+- Simoni - Team Member - Backend
+- Vardhan - Team member - ML Frameworks
+- Anitha - Team Member - Frontend UX
+- Srithika - Team Member - Quality Assurance & ML Frameworks
 
 ---
 
