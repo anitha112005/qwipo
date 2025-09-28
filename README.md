@@ -1,234 +1,125 @@
-# 🚀 Qwipo AI - Product Recommendation System
+# Qwipo: Personalized B2B Product Recommendation System
 
-An advanced B2B product recommendation system built for the Qwipo hackathon challenge. This system combines machine learning, AI assistant capabilities, and real-time features to enhance the retailer experience on B2B marketplaces.
-
-## 🏆 Hackathon Features
-
-### Core Features
-- **🤖 AI-Powered Recommendations**: Hybrid ML algorithms using collaborative filtering and content-based filtering
-- **💬 Conversational AI Assistant**: Natural language processing with OpenAI integration
-- **📊 Real-time Analytics**: Comprehensive dashboards showing user behavior and recommendation effectiveness
-- **🔔 Smart Notifications**: Proactive alerts for inventory, pricing, and recommendations
-- **📄 Document Processing**: OCR and PDF parsing for automated order processing
-- **🛒 Smart Order Management**: Automated reordering and bulk order processing
-
-### Advanced Features
-- **Real-time Updates**: Socket.IO integration for live notifications
-- **Multi-channel Communication**: WhatsApp, SMS, and email integration capabilities
-- **Voice Assistant Ready**: Infrastructure for voice command processing
-- **Explainable AI**: Clear reasons for each recommendation
-- **A/B Testing Support**: Framework for testing different recommendation strategies
-
-## 🛠️ Technology Stack
-
-### Backend
-- **Node.js** with Express.js framework
-- **MongoDB** with Mongoose ODM
-- **TensorFlow.js** for machine learning
-- **OpenAI API** for conversational AI
-- **Socket.IO** for real-time communication
-
-### ML/AI
-- **Collaborative Filtering** using user-item matrix factorization
-- **Content-Based Filtering** with TF-IDF vectorization
-- **Hybrid Recommendation System** combining multiple algorithms
-- **Natural Language Processing** for query understanding
-
-### Additional Services
-- **JWT Authentication** for secure API access
-- **Rate Limiting** for API protection
-- **Winston Logging** for comprehensive logging
-- **Multer** for file upload handling
-- **OCR/PDF Processing** for document automation
-
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js (v16 or higher)
-- MongoDB (v4.4 or higher)
-- OpenAI API Key (optional, for AI assistant)
-
-### Installation
-
-1. **Clone and Setup**
-   \`\`\`bash
-   cd qwipo-product-recommendations
-   npm install
-   \`\`\`
-
-2. **Configure Environment**
-   \`\`\`bash
-   cp .env .env.local
-   # Edit .env with your configuration:
-   # - MongoDB connection string
-   # - OpenAI API key
-   # - Other service credentials
-   \`\`\`
-
-3. **Setup Database**
-   \`\`\`bash
-   # Seed sample data
-   node src/utils/seedData.js
-   \`\`\`
-
-4. **Start the Server**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
-
-5. **Access the Application**
-   - API: http://localhost:5000
-   - Dashboard: http://localhost:5000 (serves the HTML dashboard)
-   - Health Check: http://localhost:5000/health
-
-## 📚 API Documentation
-
-### Authentication
-\`\`\`
-POST /api/auth/register - User registration
-POST /api/auth/login - User authentication
-GET /api/auth/me - Get current user profile
-\`\`\`
-
-### Product Management
-\`\`\`
-GET /api/products - Get all products (with filtering)
-GET /api/products/:id - Get single product
-GET /api/products/meta/categories - Get categories and filters
-POST /api/products/search - Advanced product search
-\`\`\`
-
-### AI Recommendations
-\`\`\`
-GET /api/recommendations - Get personalized recommendations
-GET /api/recommendations/category/:category - Category-based recommendations
-GET /api/recommendations/similar/:productId - Similar products
-POST /api/recommendations/track - Track recommendation interactions
-\`\`\`
-
-### AI Assistant
-\`\`\`
-POST /api/ai-assistant/chat - Chat with AI assistant
-POST /api/ai-assistant/upload - Upload and process documents
-GET /api/ai-assistant/history - Get conversation history
-GET /api/ai-assistant/suggestions - Get quick suggestions
-\`\`\`
-
-### Analytics & Notifications
-\`\`\`
-GET /api/analytics/dashboard - User analytics dashboard
-GET /api/analytics/products - Product performance analytics
-GET /api/notifications - Get user notifications
-PUT /api/notifications/preferences - Update notification settings
-\`\`\`
-
-## 🤖 Machine Learning Features
-
-### Recommendation Algorithms
-
-1. **Collaborative Filtering**
-   - User-item interaction matrix
-   - Cosine similarity for user matching
-   - Weighted scoring based on similar users
-
-2. **Content-Based Filtering**
-   - TF-IDF vectorization of product features
-   - Category and brand preference learning
-   - Price sensitivity analysis
-
-3. **Hybrid Approach**
-   - Combines collaborative and content-based methods
-   - Dynamic weight adjustment based on data availability
-   - Fallback to trending products for new users
-
-### AI Assistant Capabilities
-
-- **Intent Recognition**: Understands user queries and classifies intent
-- **Product Search**: Natural language product discovery
-- **Recommendation Explanations**: Provides reasons for suggestions
-- **Document Processing**: Extracts information from PDFs and images
-- **Conversation Memory**: Maintains context across interactions
-
-## 📊 Demo Data
-
-The system comes with sample data including:
-- **5 Sample Products** across different categories
-- **2 Sample Users** with different business types
-- **Sample Orders** to demonstrate recommendation algorithms
-- **Mock Analytics Data** for dashboard demonstration
-
-## 🎯 Hackathon Highlights
-
-### Innovation Points
-1. **Hybrid ML Approach**: Combines multiple recommendation techniques
-2. **Conversational AI**: Natural language interaction for product discovery
-3. **Document Automation**: OCR-powered order processing from invoices
-4. **Real-time Features**: Live notifications and updates
-5. **Explainable AI**: Clear reasoning for recommendations
-
-### Business Impact
-- **Increased Conversion**: Personalized recommendations boost sales
-- **Improved UX**: AI assistant simplifies product discovery
-- **Operational Efficiency**: Automated document processing
-- **Data-Driven Insights**: Comprehensive analytics for business decisions
-- **Scalable Architecture**: Microservices-ready design
-
-### Technical Excellence
-- **Production Ready**: Comprehensive error handling and logging
-- **Security**: JWT authentication, rate limiting, input validation
-- **Performance**: Efficient ML algorithms and database optimization
-- **Scalability**: Modular architecture with clear separation of concerns
-
-## 🔧 Development
-
-### Project Structure
-\`\`\`
-src/
-├── controllers/     # Business logic controllers
-├── models/         # MongoDB models
-├── routes/         # API routes
-├── middleware/     # Custom middleware
-├── services/       # Business services (ML, AI, etc.)
-├── utils/          # Utility functions
-└── config/         # Configuration files
-
-public/             # Static files
-logs/              # Application logs
-uploads/           # File uploads
-\`\`\`
-
-### Available Scripts
-\`\`\`bash
-npm start          # Start production server
-npm run dev        # Start development server with nodemon
-npm test           # Run tests
-npm run seed       # Seed database with sample data
-\`\`\`
-
-## 🏆 Hackathon Submission
-
-This project demonstrates:
-- ✅ **Complete B2B Recommendation System**
-- ✅ **AI/ML Integration** with real algorithms
-- ✅ **Modern Tech Stack** using latest technologies
-- ✅ **Production-Ready Code** with proper architecture
-- ✅ **Comprehensive Documentation**
-- ✅ **Demo-Ready Features** with sample data
-
-## 📞 Support
-
-For questions or issues related to this hackathon submission:
-- Check the API documentation above
-- Review the sample data in \`src/utils/seedData.js\`
-- Test endpoints using the provided Postman collection
-- Access the demo dashboard at the root URL
-
-## 🙏 Acknowledgments
-
-Built for the **Qwipo Hackathon Challenge** - Personalized Product Recommendations for Enhanced Retailer Experience.
-
-Special thanks to the Qwipo team for providing this opportunity to showcase AI-powered B2B solutions.
+## Hackathon Team Project
 
 ---
 
-**Happy Coding! 🚀**
+### 📎 Deliverables
+
+- **PPT Presentation:**  
+https://docs.google.com/presentation/d/1940sBaxmykr73T6FfZ_jj6R1wSBkLlCo/edit?usp=drive_link&ouid=112860704495655260383&rtpof=true&sd=true)]
+
+- **Project Video:**  
+  https://drive.google.com/file/d/1ZO3NEpkGfvnq75JZrC66pRz0l82CquhN/view?usp=drive_link
+
+---
+
+## Team Members
+
+<!-- Add your team members and roles here -->
+- Ujwal kriti - Team Lead
+- Simoni - Team Member
+- Vardhan - Team member
+- Anitha - Team Member
+- Srithika - Team Member
+
+---
+
+## Overview
+
+Qwipo bridges the gap for traditional vendors, manufacturers, and suppliers by providing digital tools, logistics, and financing for B2B retail.  
+Our hackathon project is an AI-powered personalized recommendation system to revolutionize retailer experience and optimize distributor business outcomes.
+
+---
+
+## Problem Statement
+
+Retailers on Qwipo’s marketplace face:
+- Repetitive buying behaviour and missed relevant products
+- Suboptimal business outcomes for both retailers and distributors
+
+**Goal:**  
+Deliver a recommendation engine that boosts cross-selling, increases basket value, improves inventory turnover, and helps retailers discover new, profitable products.
+
+---
+
+## Solution Architecture
+
+### Hybrid Recommendation Engine
+
+- **Collaborative Filtering:**  
+  Learns from retailer purchase history (what similar stores bought).
+- **Content-Based Filtering:**  
+  Suggests products similar to those previously bought, using product attributes.
+- **Deep Learning Sequence Modeling:**  
+  Predicts next likely purchases using retailer buying patterns.
+
+### Business Optimization Layer
+
+- Filters recommendations by stock quantity, profit margin, and sales velocity to ensure actionable, profitable results.
+
+---
+
+## Tech Stack
+
+- **Web & Microservices:** Node.js (Fastify), Python (FastAPI), PostgreSQL, MongoDB
+- **ML Frameworks:** scikit-learn, TensorFlow / PyTorch
+- **APIs:** REST/GraphQL, WebSocket
+- **Advanced Integration:** OpenAI/Gemini for NLP and vector embeddings
+
+---
+
+## Features
+
+- Retailer profiling (store type, location, credit tier)
+- Seasonal and temporal feature engineering
+- Product attributes: margin, expiry, supplier region
+- Real-time recommendations (WebSocket integration)
+- Business-aware ranking
+
+---
+
+## Team Workflow
+
+1. **Data Acquisition:**  
+   - Use public datasets (Kaggle/UCI) or generate synthetic B2B data
+   - Engineer rich features: retailer type, order frequency, product margins
+
+2. **Model Development:**  
+   - Encode IDs, design two-tower DNN (collaborative + content-based)
+   - Integrate product metadata and business metrics
+   - Train on temporally split data
+
+3. **Business Ranking:**  
+   - Merge model relevance with business metrics
+   - Apply weighted scoring: prioritize profitable, high-stock, fast-moving products
+
+4. **Deployment:**  
+   - Serve via FastAPI microservices
+   - Orchestrate business logic and real-time API responses with Node.js
+   - Containerize for hackathon demo (Docker)
+
+---
+
+## Business Impact
+
+| Challenge                 | Solution Outcome                                   |
+|---------------------------|---------------------------------------------------|
+| Repetitive buying         | ↑ Cross-sell, ↑ up-sell                           |
+| Poor discovery            | ↑ Product discoverability                         |
+| Distributor inefficiency  | ↑ Inventory turnover, ↑ margin                    |
+| Suboptimal purchases      | ↑ Retailer basket value (AOV)                     |
+
+---
+
+## References
+
+- [Online Retail Dataset, UCI ML Repo](https://archive.ics.uci.edu/ml/datasets/Online+Retail)
+- [Instacart Market Basket Analysis, Kaggle](https://www.kaggle.com/datasets/instacart/market-basket-analysis)
+- [Recommendation System Example (Netflix Dataset)](https://amanxai.com/2025/06/17/recommendation-system-using-python-and-tensorflow/)
+
+---
+
+## Contact
+
+For questions or feedback, contact the team via GitHub Issues.
