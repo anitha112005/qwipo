@@ -20,8 +20,8 @@ https://docs.google.com/presentation/d/1940sBaxmykr73T6FfZ_jj6R1wSBkLlCo/edit?us
 - Ujwal kriti - Team Lead - Frontend
 - Simoni - Team Member - Backend
 - Vardhan - Team member - ML Frameworks
-- Anitha - Team Member - Frontend UX
-- Srithika - Team Member - Quality Assurance & ML Frameworks
+- Anitha - Team Member - Quality Assurance & ML Frameworks
+- Srithika - Team Member - System Architect 
 
 ---
 
